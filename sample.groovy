@@ -4,7 +4,7 @@ pipeline {
         stage('git-pull') {
             steps { 
                 echo 'git pull successful'
-                sh 'echo $ENV'
+                sh 'echo $env'
             }
         }
         stage('build') {
