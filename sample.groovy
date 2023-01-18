@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'ecs-manage'
+        label 'new-node'
     }
     stages {
         stage('git-pull') {
