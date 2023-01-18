@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        lable 'ecs-manage'
+        label 'ecs-manage'
     }
     stages {
         stage('git-pull') {
