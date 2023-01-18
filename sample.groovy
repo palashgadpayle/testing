@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'new-node'
+        label 'new-node-one'
     }
     stages {
         stage('git-pull') {
