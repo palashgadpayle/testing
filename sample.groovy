@@ -1,12 +1,10 @@
 pipeline {
-    agent {
-        label 'new-node-one'
-    }
+    agent any
     stages {
         stage('git-pull') {
             steps { 
                 echo 'git pull successful'
-                sh 'echo $env'
+                sh 'env'
             }
         }
         stage('build') {
