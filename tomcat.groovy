@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('git-pull') {
             steps { 
-                sh 'sudo apt update -y'
-                sh 'sudo apt install git -y'
+                sh 'sudo apt-get update -y'
+                sh 'sudo apt-get install git -y'
                 git credentialsId: 'one', url: 'git@github.com:nishantindorkar/student-ui.git'
                 sh 'ls'
             }
