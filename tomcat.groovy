@@ -22,8 +22,7 @@ pipeline {
                 // sh 'unzip awscliv2.zip'
                 // sh 'sudo ./aws/install'
                 //You can now run: /usr/local/bin/aws --version
-                sh 'sudo mv /var/lib/jenkins/workspace/student_app/target/studentapp-2.2-SNAPSHOT.war /home/ubuntu/student-${BUILD_ID}.war'
-                sh 'aws s3 cp /home/ubuntu/student-${BUILD_ID}.war s3://myawwbucket'
+                sh 'aws s3 cp **/*.war s3://myawwbucket/student-${BUILD_ID}.war'
             }
         }
         // stage('tomcat-build') {
