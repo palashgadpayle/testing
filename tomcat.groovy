@@ -26,8 +26,7 @@ pipeline {
         }
         stage("tomcat-build") {
             steps { 
-                withCredentials([sshUserPrivateKey(), sshUserPrivateKey(credentialsId: 'cat', keyFileVariable: 'tomcat')]) 
-                {
+                withCredentials([sshUserPrivateKey(credentialsId: 'cat', keyFileVariable: 'tomcat', usernameVariable: 'ubuntu')]) { 
                 sh '''
                 ssh -i ${tomcat} -o StrictHostKeyChecking=no ubuntu@3.84.10.201<<EOF
                 #sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
