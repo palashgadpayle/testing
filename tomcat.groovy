@@ -35,8 +35,7 @@ pipeline {
                 #unzip awscliv2.zip
                 #sudo ./aws/install
                 aws s3 cp s3://studentngpbckt/student-${BUILD_ID}.war .
-                sudo apt install openjdk-11-jdk -y
-                curl -O https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.85/bin/apache-tomcat-8.5.85.tar.gz'
+                curl -O https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.85/bin/apache-tomcat-8.5.85.tar.gz
                 sudo tar -xvf apache-tomcat-8.5.85.tar.gz -C /opt/
                 sudo sh /opt/apache-tomcat-8.5.85/bin/shutdown.sh
                 sudo cp -rv student-${BUILD_ID}.war studentapp.war
