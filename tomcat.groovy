@@ -30,6 +30,7 @@ pipeline {
                 sh '''
                 ssh -i ${tomcat} -o StrictHostKeyChecking=no ubuntu@3.84.10.201<<EOF
                 sudo apt-get update -y
+                sudo apt install unzip -y
                 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
                 unzip awscliv2.zip
                 sudo ./aws/install
