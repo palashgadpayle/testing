@@ -40,7 +40,7 @@ pipeline {
                 sudo sh /opt/apache-tomcat-8.5.85/bin/shutdown.sh
                 sudo cp -rv student-${BUILD_ID}.war studentapp.war
                 sudo cp -rv studentapp.war /opt/apache-tomcat-8.5.85/webapps/
-                sudo ./opt/apache-tomcat-8.5.85/bin/startup.sh
+                sudo sh /opt/apache-tomcat-8.5.85/bin/startup.sh
                 '''
                 }
             }
