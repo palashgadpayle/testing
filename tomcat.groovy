@@ -31,9 +31,9 @@ pipeline {
                 ssh -i ${tomcat} -o StrictHostKeyChecking=no ubuntu@3.84.10.201<<EOF
                 sudo apt-get update -y
                 sudo apt install unzip -y
-                curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-                unzip awscliv2.zip
-                sudo ./aws/install
+                #curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+                #unzip awscliv2.zip
+                #sudo ./aws/install
                 aws s3 cp s3://studentngpbckt/student-${BUILD_ID}.war .
                 sudo apt install openjdk-11-jdk -y
                 curl -O https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.85/bin/apache-tomcat-8.5.85.tar.gz'
